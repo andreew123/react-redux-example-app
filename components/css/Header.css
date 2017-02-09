@@ -1,0 +1,182 @@
+/**
+* React Static Boilerplate
+* https://github.com/kriasoft/react-static-boilerplate
+*
+* Copyright © 2015-present Kriasoft, LLC. All rights reserved.
+*
+* This source code is licensed under the MIT license found in the
+* LICENSE.txt file in the root directory of this source tree.
+*/
+.headerWrapper {
+    height: 120px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 6px 0px rgb(170,170,170);
+    & .headerContent {
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        background: #FFFFFF;
+        & .logoWrapper {
+            height: 100%;
+            margin-right: 30px;
+            & a {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                height: 100%;
+                & img {
+                    height: 100%;
+                    max-width: 250px;
+                    @media screen and (max-width: 424px) {
+                        height: 30%;
+                    }
+                }
+            }
+        }
+        & .menuPointWrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            padding: 0 20px;
+            & a {
+                color: #3B3B3B;
+                font-size: 14pt;
+                transition: color 0.2s;
+                &:hover {
+                    color: #4Eb642;
+                }
+                &.greenText {
+                    color: #4EB642;
+                }
+            }
+            @media screen and (max-width: 1039px) {
+                position: absolute;
+                background-color: rgba(255,255,255,0.85);
+                flex-direction: column;
+                width: initial;
+                left: 0;
+                right: 0;
+                padding: 0;
+                height: initial;
+                padding: 20px 0 0 0;
+                transition: top 0.2s ease-out;
+                z-index: 1;
+                & a {
+                    display: block;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        & .rightButtonsWrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & .searchWrapper form {
+                color: #4EB642;
+                display: flex;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+                padding: 0 20px;
+                & span {
+                    font-size: 16pt;
+                    margin: 3px;
+                }
+                & input {
+                    border: 0;
+                    border-bottom: 2px solid #4EB642;
+                    outline: none;
+                    padding: 10px 5px;
+                    font-size: 12pt;
+                    width: 150px;
+                    &:focus {
+                        outline: none;
+                    }
+                    &::-webkit-input-placeholder {
+                        color: #4EB642;
+                        text-transform: uppercase;
+                        font-size: 10pt;
+                    }
+                    &::-moz-placeholder{
+                        color: #4EB642;
+                        text-transform: uppercase;
+                        font-size: 10pt;
+                    }
+                    &:-moz-placeholder {
+                        color: #4EB642;
+                        text-transform: uppercase;
+                        font-size: 10pt;
+                    }
+                    &:-ms-input-placeholder {
+                        color: #4EB642;
+                        text-transform: uppercase;
+                        font-size: 10pt;
+                    }
+                    @media screen and (max-width: 767px) {
+                        width: 110px;
+                        padding: 7px 0;
+                    }
+                }
+            }
+            & .shopButton {
+                background-color: #4EB642;
+                color: #ffffff;
+                width: 75px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 18pt;
+                @media screen and (max-width: 1439px) {
+                    position: absolute;
+                    top: -80px;
+                    left: 0;
+                    right: 0;
+                    width: inherit;
+                    height: 50px;
+                    transition: top 0.2s ease-out;
+                }
+            }
+            & .mobileMenuButton {
+                display: none;
+                border: 1px solid #3B3B3B;
+                height: 40px;
+                width: 40px;
+                font-size: 17pt;
+                border-radius: 4px;
+                cursor: pointer;
+                @media screen and (max-width: 1439px) {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    &.mobileMenuOpened {
+        & .shopButton {
+            top: 325px;
+        }
+        & .menuPointWrapper {
+            top: 80px;
+        }
+        & .mobileMenuBackdrop {
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(40,40,40,0.6);
+        }
+    }
+    & .mobileMenuBackdrop {
+        position: absolute;
+    }
+    @media screen and (max-width: 1039px) {
+        height: 80px;
+    }
+}

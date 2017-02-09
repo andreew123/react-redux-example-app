@@ -1,0 +1,59 @@
+/**
+ * React Static Boilerplate
+ * https://github.com/koistya/react-static-boilerplate
+ *
+ * Copyright © 2015-2016 Konstantin Tarkus (@koistya)
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+@import './Colours.css';
+@import './Buttons.css';
+@import './Helpers.css';
+@import './Header.css';
+@import './Layout.css';
+@import './Footer.css';
+
+@font-face {
+    font-family: 'open-sans';
+    src: url('../assets/Fonts/open-sans/OpenSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open-sans';
+    src: url('../assets/Fonts/open-sans/OpenSans-Italic.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'open-sans';
+    src: url('../assets/Fonts/open-sans/OpenSans-Light.ttf');
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open-sans';
+    src: url('../assets/Fonts/open-sans/OpenSans-LightItalic.ttf');
+    font-weight: lighter;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'open-sans';
+    src: url('../assets/Fonts/open-sans/OpenSans-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open-sans';
+    src: url('../assets/Fonts/open-sans/OpenSans-Bolditalic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+body {
+    font-size: 14pt;
+    line-height: normal;
+    font-family: 'open-sans';
+    color: #4E4E4E;
+    background-color: #FFFFFF;
+}

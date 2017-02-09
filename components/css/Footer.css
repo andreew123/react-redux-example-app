@@ -1,0 +1,95 @@
+footer {
+    background: #565656;
+    color: #FFFFFF;
+    padding: 40px 0 0 0;
+    & .colWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-bottom: 30px;
+        & .footerCol {
+            width: 31%;
+            & .footerTitle {
+                font-weight: bold;
+                font-size: 24pt;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+            }
+            & .colTitle {
+                font-weight: bold;
+                font-size: 17.5pt;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+            }
+            & .footerDesc {
+                margin-bottom: 20px;
+            }
+            & .contactIconWrapper {
+                & .contactIconRow {
+                    margin-bottom: 15px;
+                    & a {
+                        color: #FFFFFF;
+                        &:hover {
+                            color: #4EB642;
+                        }
+                    }
+                    & .faIcon {
+                        font-size: 17pt;
+                        margin-right: 15px;
+                    }
+                }
+            }
+            & ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                & li {
+                    margin-bottom: 15px;
+                    & a {
+                        color: #FFFFFF;
+                        transition: color 0.2s;
+                        &:hover {
+                            color: #4EB642;
+                        }
+                    }
+                }
+            }
+            & .socialSitesWrapper {
+                display: flex;
+                & .iconBtn {
+                    color: #4EB642;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+    & .bottomFooter {
+        background: #3B3B3B;
+        height: 50px;
+        & .content {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12pt;
+            align-items: center;
+            height: 100%;
+            & .siteLinks ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                text-transform: uppercase;
+                & li {
+                    margin-left: 20px;
+                    & a {
+                        color: #FFFFFF;
+                        transition: color 0.2s;
+                        &:hover {
+                            color: #4Eb642;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

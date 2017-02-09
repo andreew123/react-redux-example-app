@@ -1,0 +1,32 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 175px;
+    height: 45px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    border: none;
+    font-weight: bold;
+    font-size: 11pt;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    &.greenBtn {
+        background-color: #4EB642;
+        color: #FFFFFF;
+        & a {
+            color: #FFFFFF;
+        }
+    }
+    &.iconBtn {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    & a {
+        text-transform: uppercase;
+    }
+}

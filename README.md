@@ -8,10 +8,10 @@ Clone the repo and run the installation commands, each in a new terminal window.
 import mydatabase.sql
 
 ### Install deps in the project root and in the server directory
-npm install
-cd server && npm install
-create .env file
-cd ..
+    npm install
+    cd server && npm install
+    create .env file
+    cd ..
 
 ### Run the server
 npm run server

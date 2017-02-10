@@ -23,7 +23,7 @@ export default class Header extends Component {
                   <Navbar.Toggle />
                 </Navbar.Header>
                 <Navbar.Collapse>
-                  <Nav>
+                  <Nav className={s.navBarWrapper}>
                     <LinkContainer to="/">
                         <NavItem eventKey={1}>Főoldal</NavItem>
                     </LinkContainer>
@@ -40,7 +40,7 @@ export default class Header extends Component {
                         <NavItem eventKey={5}>Beállítások</NavItem>
                     </LinkContainer>
                   </Nav>
-                  <Nav pullRight>
+                  <Nav pullRight className={s.navBarWrapper}>
                       {/*}<LinkContainer to="/me">
                           <NavItem eventKey={1}>Profilom</NavItem>
                       </LinkContainer>*/}

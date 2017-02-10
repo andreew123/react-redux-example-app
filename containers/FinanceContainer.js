@@ -4,6 +4,8 @@ import Header from '../components/Header'
 import FinanceRecordList from '../components/Finance/FinanceRecordList'
 import NewFinanceRecordForm from '../components/Finance/NewFinanceRecordForm'
 import { logoutUser } from '../actions/LogoutActions'
+import { saveFinanceRecord } from '../actions/FinanceActions'
+import s from '../components/css/styles.css';
 
 class FinanceContainer extends Component {
 
@@ -11,16 +13,28 @@ class FinanceContainer extends Component {
 		const { dispatch, finances, isAuthenticated, errorMessage } = this.props
 		return (
 			<div>
-				<Header
-					isAuthenticated={isAuthenticated}
-					dispatch={dispatch}
-					onLogoutClick={() => dispatch(logoutUser())}
-				/>
-				<div>
-					<FinanceRecordList
-						isAuthenticated={isAuthenticated}
-						finances={finances}
-					/>
+				{isAuthenticated &&
+	              <Header
+	                isAuthenticated={isAuthenticated}
+	                dispatch={dispatch}
+	                onLogoutClick={() => dispatch(logoutUser())}
+	              />
+	            }
+				<div className={s.contentWider}>
+					<div>
+						<FinanceRecordList
+							isAuthenticated={isAuthenticated}
+							finances={finances}
+						/>
+					</div>
+					<div>
+						<NewFinanceRecordForm
+							onClickSave={ data => dispatch(saveFinanceRecord(data)) }
+							isAuthenticated={isAuthenticated}
+							errorMessage={errorMessage}
+							dispatch={dispatch}
+						/>
+					</div>
 				</div>
 			</div>
 		)

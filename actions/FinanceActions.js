@@ -31,7 +31,6 @@ function failFinanceList(error) {
   }
 }
 
-// Uses the API middlware to get finances list
 export function fetchFinanceRecords() {
 
     let config = {
@@ -92,9 +91,8 @@ export function saveFinanceRecord(data) {
 		method: 'POST',
 		headers: { 'Content-Type':'application/x-www-form-urlencoded',
                     'Authorization': `Bearer ${token}` },
-        body: `lastname=${data.lastname}&firstname=${data.firstname}&email=${data.email}
-            &password=${data.password}&birthday=${data.birthday}&phone=${data.phone}
-            &title=${data.title}&roleId=${data.roleId}`
+        body: `companyId=${data.companyId}&closingBalance=${data.closingBalance}
+            &phoenixDebit=${data.phoenixDebit}&incomingOep=${data.incomingOep}`
     }
 
     return dispatch => {
@@ -110,7 +108,6 @@ export function saveFinanceRecord(data) {
 	        }
 	        else {
 	          // Dispatch the success action
-              console.log('finance', finance);
 	          dispatch(saveFinanceSuccess(finance))
 	        }
 	      }).catch(err => console.log("Error: ", err))

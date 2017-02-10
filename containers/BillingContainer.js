@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { loginUser } from '../actions/LoginActions'
 import Login from '../components/Login'
-import Navbar from '../components/Navbar'
+import Header from '../components/Header'
 import Home from '../components/Home'
 
 class BillingContainer extends Component {
@@ -11,7 +11,7 @@ class BillingContainer extends Component {
     const { dispatch, isAuthenticated, errorMessage } = this.props
     return (
       <div>
-          <Navbar
+          <Header
             isAuthenticated={isAuthenticated}
             dispatch={dispatch}
           />

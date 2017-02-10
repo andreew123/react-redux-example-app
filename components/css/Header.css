@@ -7,6 +7,24 @@
 * This source code is licensed under the MIT license found in the
 * LICENSE.txt file in the root directory of this source tree.
 */
+.logoWrapper {
+    height: 100%;
+    margin-right: 30px;
+    & a {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+        & img {
+            height: initial;
+            max-width: 130px;
+            @media screen and (max-width: 424px) {
+                height: 30%;
+            }
+        }
+    }
+}
+
 .headerWrapper {
     height: 120px;
     background-color: #FFFFFF;
@@ -54,13 +72,14 @@
                     color: #4EB642;
                 }
             }
-            @media screen and (max-width: 1039px) {
+            @media screen and (max-width: 1439px) {
                 position: absolute;
                 background-color: rgba(255,255,255,0.85);
                 flex-direction: column;
                 width: initial;
                 left: 0;
                 right: 0;
+                top: -325px;
                 padding: 0;
                 height: initial;
                 padding: 20px 0 0 0;
@@ -176,7 +195,7 @@
     & .mobileMenuBackdrop {
         position: absolute;
     }
-    @media screen and (max-width: 1039px) {
+    @media screen and (max-width: 1439px) {
         height: 80px;
     }
 }

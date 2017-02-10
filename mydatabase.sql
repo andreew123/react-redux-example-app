@@ -32,8 +32,8 @@ CREATE TABLE `company` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   `company_name` varchar(255) NOT NULL,
-  `tax_number` int(11) NOT NULL,
-  `record_number` int(11) NOT NULL,
+  `tax_number` varchar(30) NOT NULL,
+  `record_number` varchar(30) NOT NULL,
   `phone_number` varchar(30) NOT NULL,
   `seat` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -50,6 +50,7 @@ CREATE TABLE `finance` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   `user_id` int(11) NOT NULL,
+  `company_id` int(11) NOT NULL,
   `closing_balance` int(11) NOT NULL,
   `phoenix_debit` int(11) NOT NULL,
   `incoming_oep` int(11) NOT NULL
@@ -59,8 +60,8 @@ CREATE TABLE `finance` (
 -- A tábla adatainak kiíratása `finance`
 --
 
-INSERT INTO `finance` (`id`, `created_at`, `updated_at`, `deleted_at`, `user_id`, `closing_balance`, `phoenix_debit`, `incoming_oep`) VALUES
-(1, '2017-02-09 20:21:59', NULL, NULL, 1, 5000000, 3000000, 2000000);
+INSERT INTO `finance` (`id`, `created_at`, `updated_at`, `deleted_at`, `user_id`, `company_id`, `closing_balance`, `phoenix_debit`, `incoming_oep`) VALUES
+(1, '2017-02-09 20:21:59', NULL, NULL, 1, 1, 5000000, 3000000, 2000000);
 
 -- --------------------------------------------------------
 

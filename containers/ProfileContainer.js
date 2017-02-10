@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { loginUser } from '../actions/LoginActions'
 import { logoutUser } from '../actions/LogoutActions'
 import Login from '../components/Login'
-import Navbar from '../components/Navbar'
+import Header from '../components/Header'
 import Home from '../components/Home'
 
 class ProfileContainer extends Component {
@@ -12,7 +12,7 @@ class ProfileContainer extends Component {
     const { dispatch, isAuthenticated, errorMessage } = this.props
     return (
       <div>
-          <Navbar
+          <Header
             isAuthenticated={isAuthenticated}
             dispatch={dispatch}
             onLogoutClick={() => dispatch(logoutUser())}

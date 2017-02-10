@@ -25,7 +25,6 @@ export default class LoginForm extends Component {
         event.preventDefault();
         let creds = { email: this.state.email,
             password: this.state.password };
-        console.log('creds', creds);
         this.props.onLoginClick(creds);
     }
 

@@ -4,12 +4,6 @@ export const FETCH_USERS_FAILURE = 'FETCH_USERS_FAILURE';
 export const REQUEST_SAVE_USER = 'REQUEST_SAVE_USER';
 export const SAVE_USER_SUCCESS = 'SAVE_USER_SUCCESS';
 export const SAVE_USER_FAILURE = 'SAVE_USER_FAILURE';
-export const Clicked_Edit_Profile = 'Clicked_Edit_Profile';
-export const Edit_Profile_Success = 'Edit_Profile_Success';
-export const Edit_Profile_Fail = 'Edit_Profile_Fail';
-export const Clicked_Edit_Password = 'Clicked_Edit_Password';
-export const Edit_Password_Success = 'Edit_Password_Success';
-export const Edit_Password_Fail = 'Edit_Password_Fail';
 
 function requestUserList() {
   return {
@@ -58,7 +52,6 @@ export function fetchUsers() {
 	        }
 	        else {
 	          // Dispatch the success action
-              console.log('users', users.userList);
 	          dispatch(receiveUserList(users))
 	        }
 	      }).catch(err => console.log("Error: ", err))
@@ -114,7 +107,6 @@ export function saveUser(data) {
 	        }
 	        else {
 	          // Dispatch the success action
-              console.log('user', user);
 	          dispatch(saveUserSuccess(user))
 	        }
 	      }).catch(err => console.log("Error: ", err))

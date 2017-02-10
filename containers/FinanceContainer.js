@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import Navbar from '../components/Navbar'
+import Header from '../components/Header'
 import FinanceRecordList from '../components/Finance/FinanceRecordList'
 import NewFinanceRecordForm from '../components/Finance/NewFinanceRecordForm'
 import { logoutUser } from '../actions/LogoutActions'
@@ -11,7 +11,7 @@ class FinanceContainer extends Component {
 		const { dispatch, finances, isAuthenticated, errorMessage } = this.props
 		return (
 			<div>
-				<Navbar
+				<Header
 					isAuthenticated={isAuthenticated}
 					dispatch={dispatch}
 					onLogoutClick={() => dispatch(logoutUser())}
